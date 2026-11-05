@@ -1,17 +1,15 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=YOUR%20NAME&fontSize=54&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Application%20Security%20%C2%B7%20Recon%20%C2%B7%20Open%20Source&descAlignY=60&descSize=20" alt="header" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=jeet2510&fontSize=54&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Application%20Security%20%C2%B7%20Recon%20%C2%B7%20Open%20Source&descAlignY=60&descSize=20" alt="header" />
 
-<a href="https://github.com/YOUR_USERNAME">
-  <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=22&pause=1200&color=7C5CFF&center=true&vCenter=true&width=640&lines=I+map+attack+surfaces.;I+build+tools+that+finish+the+job.;Open+source+%2B+AppSec+%2B+Python." alt="Typing animation" />
+<a href="https://github.com/jeet2510">
+  <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=22&pause=1200&color=7C5CFF&center=true&vCenter=true&width=640&lines=Recon+automation;Attack+surface+management;Open-source+security+tools;Bug+bounty+workflows" alt="Typing animation" />
 </a>
 
 <br/>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/YOUR_LINKEDIN)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-7C5CFF?style=for-the-badge&logo=githubpages&logoColor=white)](https://YOUR_USERNAME.github.io)
-[![Email](https://img.shields.io/badge/Email-Say%20hi-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:you@example.com)
-![Profile views](https://komarev.com/ghpvc/?username=YOUR_USERNAME&label=Profile%20views&color=7C5CFF&style=for-the-badge)
+[![Portfolio](https://img.shields.io/badge/Portfolio-7C5CFF?style=for-the-badge&logo=githubpages&logoColor=white)](https://jeet2510.github.io/jeet2510/portfolio/)
+![Profile views](https://komarev.com/ghpvc/?username=jeet2510&label=Profile%20views&color=7C5CFF&style=for-the-badge)
 
 </div>
 
@@ -19,57 +17,35 @@
 
 ## 👋 About me
 
-I'm an application security enthusiast who likes turning messy manual work into reliable systems.
-I focus on **reconnaissance, attack surface management and bug bounty tooling**, built in Python.
+Application security, recon automation and open-source tooling, built in Python.
 
-- 🔭 Currently building: **subdomain-recon-pipeline**
-- 🌱 Learning: web security, automation at scale, better detection of what changed between scans
-- 💬 Ask me about: recon workflows, OSINT, Python tooling, bug bounty
+- 🔭 Currently building: my attack surface mapping pipeline
+- 🌱 Learning: web security and automation at scale
+- 💬 Ask me about: recon workflows, OSINT, Python tooling
 - 📫 Best way to reach me: LinkedIn or email
-
----
 
 ## 🚀 Featured project
 
-<table>
-<tr>
-<td width="100%">
-
-### 🛰️ [subdomain-recon-pipeline](https://github.com/YOUR_USERNAME/subdomain-recon-pipeline)
-
-A decoupled, 3-stage asset discovery and attack surface management pipeline with a live dashboard.
+### [subdomain-recon-pipeline](https://github.com/jeet2510/subdomain-recon-pipeline)
 
 | Stage | What it does |
 |---|---|
-| 🔎 **1. Discover** | Collects subdomains from passive sources, then normalizes and deduplicates them |
-| 🚪 **2. Verify** | Concurrent checks that separate true `200 OK` hosts from redirects, blocked pages and dead hosts |
-| 📸 **3. Capture** | Screenshots only verified hosts, with a dashboard and **history comparison against previous scans** |
+| **1. Find every door** | Collects subdomains from passive sources (Amass, crt.sh, Certspotter, OTX, Wayback), then normalizes and deduplicates them. Results are saved right away. |
+| **2. Knock on each one** | Runs concurrent, non-blocking checks and separates true 200 OK hosts from redirects, blocked pages and offline hosts. State is saved after the stage. |
+| **3. Photograph the open ones** | Takes headless-browser screenshots only for verified 200 OK hosts and serves a live dashboard with progress and comparisons against earlier scans. |
 
-✅ Every stage saves its state, so an interrupted scan **resumes instead of restarting**.
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Open Source](https://img.shields.io/badge/Open%20Source-Yes-3DDC97?style=flat-square)
-![License](https://img.shields.io/github/license/YOUR_USERNAME/subdomain-recon-pipeline?style=flat-square)
-![Stars](https://img.shields.io/github/stars/YOUR_USERNAME/subdomain-recon-pipeline?style=flat-square)
+![Language](https://img.shields.io/github/languages/top/jeet2510/subdomain-recon-pipeline?style=flat-square) ![Stars](https://img.shields.io/github/stars/jeet2510/subdomain-recon-pipeline?style=flat-square) ![License](https://img.shields.io/github/license/jeet2510/subdomain-recon-pipeline?style=flat-square)
 
 <details>
-<summary><b>👉 Click to see how the history comparison works</b></summary>
+<summary><b>👉 Click to see how scan history works</b></summary>
 
-<br/>
+Scan the same company again and see what changed: new, changed and closed hosts.
 
-Scan the same company again and the dashboard shows what changed:
-
-- 🟢 **New**: subdomains that appeared since the last scan
-- 🟠 **Changed**: hosts whose status moved (for example `200` to `302`)
-- 🔴 **Closed**: hosts that disappeared
-
-In attack surface management, *what changed* is often the real finding.
+- 🟢 **New**: appeared since the last scan
+- 🟠 **Changed**: status moved (for example `200` to `302`)
+- 🔴 **Closed**: no longer reachable
 
 </details>
-
-</td>
-</tr>
-</table>
 
 ---
 
@@ -77,12 +53,8 @@ In attack surface management, *what changed* is often the real finding.
 
 <div align="center">
 
-<a href="https://github.com/YOUR_USERNAME">
-  <img height="180" src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D0F2B&title_color=7C5CFF&icon_color=3DDC97" alt="GitHub stats" />
-</a>
-<a href="https://github.com/YOUR_USERNAME">
-  <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D0F2B&title_color=7C5CFF" alt="Top languages" />
-</a>
+<a href="https://github.com/jeet2510"><img height="180" src="https://github-readme-stats.vercel.app/api?username=jeet2510&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D0F2B&title_color=7C5CFF&icon_color=3DDC97" alt="GitHub stats" /></a>
+<a href="https://github.com/jeet2510"><img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jeet2510&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D0F2B&title_color=7C5CFF" alt="Top languages" /></a>
 
 </div>
 
@@ -97,13 +69,11 @@ In attack surface management, *what changed* is often the real finding.
 </div>
 
 <details>
-<summary><b>🔐 Security toolkit I work with</b></summary>
+<summary><b>🔐 More about my toolkit</b></summary>
 
-<br/>
-
-- **Recon / OSINT:** OWASP Amass, crt.sh, Certspotter, AlienVault OTX, Wayback Archive
-- **Web testing:** Burp Suite, browser dev tools, headless browser automation
-- **Automation:** Python, concurrent HTTP workflows, JSON-based pipelines
+- Recon / OSINT: OWASP Amass, crt.sh, Certspotter, AlienVault OTX, Wayback Archive
+- Web testing: Burp Suite, browser dev tools, headless browser automation
+- Automation: Python, concurrent HTTP workflows, JSON-based pipelines
 
 </details>
 
@@ -114,9 +84,9 @@ In attack surface management, *what changed* is often the real finding.
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/output/github-snake.svg" />
-  <img alt="Contribution snake" src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/output/github-snake.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jeet2510/jeet2510/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/jeet2510/jeet2510/output/github-snake.svg" />
+  <img alt="Contribution snake" src="https://raw.githubusercontent.com/jeet2510/jeet2510/output/github-snake.svg" />
 </picture>
 
 </div>
@@ -126,10 +96,11 @@ In attack surface management, *what changed* is often the real finding.
 ## 🤝 Let's collaborate
 
 Feedback, issues and pull requests on my projects are always welcome.
-If you do bug bounty or AppSec work and have ideas for better recon tooling, I'd like to hear them.
 
 <div align="center">
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" alt="footer" />
+
+<sub>Use security tools only on systems you own or have written permission to test.</sub>
 
 </div>
