@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=JEET PANDYA&fontSize=54&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Application%20Security%20%C2%B7%20Recon%20%C2%B7%20Open%20Source&descAlignY=60&descSize=20" alt="header" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=JEET%20PANDYA&fontSize=54&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Application%20Security%20%C2%B7%20Recon%20%C2%B7%20Open%20Source&descAlignY=60&descSize=20" alt="header" />
 
 <a href="https://github.com/jeet2510">
   <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=22&pause=1200&color=7C5CFF&center=true&vCenter=true&width=640&lines=Recon+automation;Attack+surface+management;Open-source+security+tools;Bug+bounty+workflows" alt="Typing animation" />
