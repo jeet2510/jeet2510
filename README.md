@@ -49,11 +49,11 @@ Scan the same company again and see what changed: new, changed and closed hosts.
 
 ---
 
-## 📊 GitHub stats
+## 📊 Public GitHub stats
 
 <div align="center">
 
-<a href="https://github.com/jeet2510"><img height="180" src="https://github-readme-stats.vercel.app/api?username=jeet2510&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D0F2B&title_color=7C5CFF&icon_color=3DDC97" alt="GitHub stats" /></a>
+<a href="https://github.com/jeet2510"><img height="180" src="https://github-readme-stats.vercel.app/api?username=jeet2510&show_icons=true&include_all_commits=true&theme=tokyonight&hide_border=true&bg_color=0D0F2B&title_color=7C5CFF&icon_color=3DDC97" alt="Public GitHub stats across all branches" /></a>
 <a href="https://github.com/jeet2510"><img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jeet2510&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D0F2B&title_color=7C5CFF" alt="Top languages" /></a>
 
 </div>
