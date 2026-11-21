@@ -64,7 +64,7 @@ Scan the same company again and see what changed: new, changed and closed hosts.
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=python,bash,linux,docker,git,github,flask,html,css,js&theme=dark" alt="Skills" />
+<img src="https://skillicons.dev/icons?i=python,laravel,bash,linux,docker,git,github,flask,html,css,js&theme=dark" alt="Skills" />
 
 </div>
 
