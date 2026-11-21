@@ -2,8 +2,8 @@ name: Generate contribution snake
 
 on:
   schedule:
-    - cron: "0 */12 * * *"   # every 12 hours
-  workflow_dispatch:          # lets you run it manually from the Actions tab
+    - cron: "0 */12 * * *" # every 12 hours
+  workflow_dispatch: # lets you run it manually from the Actions tab
   push:
     branches: [main]
 
@@ -22,6 +22,74 @@ jobs:
           outputs: |
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
+
+      - name: Generate all-time contribution stats
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GH_STATS_TOKEN || github.token }}
+          script: |
+            const fs = require('fs');
+            let headline = 'Token required';
+            let caption = 'Add the GH_STATS_TOKEN repository secret';
+
+            if (process.env.GH_STATS_TOKEN) {
+              try {
+                const { user } = await github.graphql(
+                  `query ($login: String!) {
+                    user(login: $login) { createdAt }
+                  }`,
+                  { login: 'jeet2510' }
+                );
+
+                const now = new Date();
+                let periodStart = new Date(user.createdAt);
+                let totalCommits = 0;
+
+                while (periodStart < now) {
+                  const nextYear = new Date(Date.UTC(periodStart.getUTCFullYear() + 1, 0, 1));
+                  const periodEnd = new Date(Math.min(nextYear.getTime() - 1, now.getTime()));
+                  const result = await github.graphql(
+                    `query ($login: String!, $from: DateTime!, $to: DateTime!) {
+                      user(login: $login) {
+                        contributionsCollection(
+                          from: $from,
+                          to: $to,
+                          includePrivateContributions: true
+                        ) { totalCommitContributions }
+                      }
+                    }`,
+                    {
+                      login: 'jeet2510',
+                      from: periodStart.toISOString(),
+                      to: periodEnd.toISOString()
+                    }
+                  );
+                  totalCommits += result.user.contributionsCollection.totalCommitContributions;
+                  periodStart = nextYear;
+                }
+
+                headline = totalCommits.toLocaleString('en-US');
+                caption = 'ALL-TIME COMMITS  |  PUBLIC + PRIVATE';
+              } catch (error) {
+                core.warning(`Could not fetch contribution stats: ${error.message}`);
+                headline = 'Unavailable';
+                caption = 'Check GH_STATS_TOKEN permissions';
+              }
+            }
+
+            const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="495" height="180" viewBox="0 0 495 180" role="img" aria-labelledby="title desc">
+              <title id="title">GitHub all-time commits</title>
+              <desc id="desc">${headline} ${caption}</desc>
+              <rect x="1" y="1" width="493" height="178" rx="8" fill="#0D1117" stroke="#30363D"/>
+              <text x="28" y="48" fill="#8B949E" font-family="Arial, sans-serif" font-size="14">GITHUB CONTRIBUTIONS</text>
+              <text x="28" y="112" fill="#F0F6FC" font-family="Arial, sans-serif" font-size="42" font-weight="700">${headline}</text>
+              <text x="28" y="148" fill="#58A6FF" font-family="Arial, sans-serif" font-size="12">${caption}</text>
+            </svg>`;
+
+            fs.mkdirSync('dist', { recursive: true });
+            fs.writeFileSync('dist/github-stats.svg', svg);
+        env:
+          GH_STATS_TOKEN: ${{ secrets.GH_STATS_TOKEN }}
 
       - name: Push to the output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
